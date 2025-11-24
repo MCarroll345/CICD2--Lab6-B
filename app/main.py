@@ -4,6 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 
 from app.database import engine, SessionLocal
+import httpx, os
 
 app = FastAPI(title="Service B - Proxy API")
 SERVICE_A_BASE_URL = os.getenv("SERVICE_A_BASE_URL", "http://localhost:8001")
